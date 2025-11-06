@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Hero from "./components/home/Hero";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-semibold">Home</h1>
-      <p>My new Next.js + TypeScript + Tailwind site ✅</p>
-    </main>
+    <>
+      <Hero />
+      {/* rest of the page… */}
+    </>
   );
 }

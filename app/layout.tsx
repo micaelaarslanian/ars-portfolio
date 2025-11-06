@@ -1,14 +1,21 @@
-import "./globals.css";
-import Navbar from "./components/Navbar";
 import type { ReactNode } from "react";
+import { rubik, fraunces } from "./fonts";
+
+import "./globals.css";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${rubik.variable} ${fraunces.variable} font-sans`}>
         <Navbar />
         <main>{children}</main>
-        <footer id="contact">Footer placeholder</footer>
+        <Footer />
       </body>
     </html>
   );

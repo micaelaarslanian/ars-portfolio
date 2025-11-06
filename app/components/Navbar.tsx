@@ -85,26 +85,29 @@ export default function Navbar() {
     return (
         <>
             {/* ----- header  ----- */}
-            <header className="sticky top-0 z-30 flex h-16 w-full items-center px-4 bg-white/80 backdrop-blur border-b border-black/10">
+            <header className="sticky top-0 z-30 flex h-16 w-full items-center px-4 bg-[#FFFFF7] backdrop-blur ">
                 <Link href="/" aria-label="Go home" className="font-semibold text-[#2b3a2f]">
-                    <img src="/logo_green.png" alt="ars" className="h-6" />
+                    <img src="/logo_green.png" alt="ars" className="h-10" />
                 </Link>
 
                 {/* DESKTOP NAV */}
                 <nav className="ml-auto hidden md:block">
-                    <ul className="flex items-center gap-8 text-[16px] text-[#3a4f36]">
+                    <ul className="flex items-center gap-8 text-[16px] text-[#3a4f36] font-sans">
                         {LINKS.map((l) => (
-                            <li key={l.href}>
-                                <Link href={l.href} className="hover:opacity-80">
+                            <motion.li
+                                key={l.href}
+                                whileHover={{ y: -3, transition: { duration: 0.18, ease: "easeOut" } }}
+                                whileTap={{ scale: 0.96 }}>
+                                <Link href={l.href} className="cursor-pointer hover:opacity-80 transition-opacity">
                                     {l.label}
                                 </Link>
-                            </li>
+                            </motion.li>
                         ))}
                     </ul>
                 </nav>
             </header>
 
-            {/* ----- FLOATING toggle button — visible on devices small devices */}
+            {/* ----- FLOATING toggle button — visible only on small devices */}
             <button
                 onClick={() => setOpen(v => !v)}
                 aria-label="Toggle menu"
@@ -159,16 +162,16 @@ export default function Navbar() {
                         variants={panelVariants}
                     >
                         {/* alt logo inside panel */}
-                        <div className="flex justify-between items-center px-4 py-3">
+                        <div className="flex justify-between items-center px-4 py-3 ">
                             <Link href="/" onClick={() => setOpen(false)}>
-                                <img src="/logo_white.png" alt="ars" className="h-6" />
+                                <img src="/logo_white.png" alt="ars" className="h-10" />
                             </Link>
                         </div>
 
-                        {/* links */}
-                        <nav className="px-4 mt-2 md:hidden">
+                        {/* links / navbar inside panel */}
+                        <nav className="px-4 mt-4 py-8 md:hidden">
                             <motion.ul
-                                className="flex flex-col gap-4"
+                                className="flex flex-col gap-4 "
                                 initial="closed"
                                 animate="open"
                                 exit="closed"
@@ -176,11 +179,16 @@ export default function Navbar() {
                                 style={{ willChange: "transform, opacity" }}
                             >
                                 {LINKS.map((l) => (
-                                    <motion.li key={l.href} variants={itemVariants}>
+                                    <motion.li
+                                        key={l.href}
+                                        variants={itemVariants}
+                                        whileHover={{ x: 4 }}         // subtle slide right
+                                        whileTap={{ scale: 0.96 }}    // small press effect
+                                    >
                                         <Link
                                             href={l.href}
                                             onClick={() => setOpen(false)}
-                                            className="text-sm hover:opacity-80"
+                                            className="text-[18px] text-white font-sans hover:opacity-80"
                                         >
                                             {l.label}
                                         </Link>
