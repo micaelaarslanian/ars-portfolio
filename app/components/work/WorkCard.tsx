@@ -66,7 +66,7 @@ export default function WorkCard({ work }: { work: Work }) {
         <motion.li layout initial={false} className="py-8 md:py-10">
             <Link href={`/work/${work.slug}`} className="group block focus:outline-none">
                 <motion.article
-                    initial={{ backgroundColor: "#F8F8F8", scale: 1 }}
+                    initial={{ backgroundColor: "#FFFFF7", scale: 1 }}
                     whileHover={{ backgroundColor: "#FFFFFF", scale: scaleHover }}
                     whileTap={{ scale: scaleTap }}
                     transition={{ type: "spring", stiffness: 260, damping: 22, mass: 0.6 }}
@@ -76,7 +76,7 @@ export default function WorkCard({ work }: { work: Work }) {
                 >
                     {/* Thumbnail container */}
                     <div className="md:col-span-3">
-                        <div className="overflow-hidden rounded-sm bg-gray-200">
+                        <div className="overflow-hidden rounded-sm ">
                             {/* MOBILE image */}
                             <div className="relative md:hidden aspect-[16/9] w-full">
                                 <motion.div
@@ -93,7 +93,7 @@ export default function WorkCard({ work }: { work: Work }) {
                                             : { opacity: { duration: 0.35 }, scale: { type: "spring", stiffness: 180, damping: 20 } }
                                     }
                                 >
-å                                    <img src={work.thumbUrl} className="h-full w-full bg-gray-300" />
+                                    <img src={work.thumbUrl} className="h-full w-full" />
                                 </motion.div>
                             </div>
 
@@ -128,19 +128,19 @@ export default function WorkCard({ work }: { work: Work }) {
 
                     {/* Text block (title + description) */}
                     <div className="md:col-span-6">
-                        <h3 className="text-[20px] font-semibold tracking-wide text-[#174727]">
+                        <h3 className="text-[36px]  tracking-wide text-[#174727]">
                             <WordReveal text={work.title} delay={baseDelay + 0.02} />
                         </h3>
-                        <p className="mt-1 text-xs tracking-wide text-[#174727]/80">
+                        <p className="mt-1 text-[18px] tracking-wide text-[#174727]">
                             <WordReveal text={work.description ?? ""} delay={baseDelay + 0.08} />
                         </p>
                     </div>
 
                     {/* Fields */}
-                    <div className="md:col-span-3 md:text-right">
+                    <div className="md:col-span-3 md:text-right ">
                         {work.fields?.length ? (
-                            <p className="mt-1 text-xs tracking-wide text-[#174727]/80">
-                                <WordReveal text={work.fields.join(", ")} delay={baseDelay + 0.1} />
+                            <p className="font-serif mt-1 text-[16px] tracking-wide text-[#174727]">
+                                ✺  <WordReveal text={work.fields.join(", ")} delay={baseDelay + 0.1} />
                             </p>
                         ) : null}
                     </div>

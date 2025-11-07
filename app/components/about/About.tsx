@@ -72,7 +72,7 @@ export default function About() {
     );
 
     return (
-        <section className="bg-[#FEFEFE] text-[#174727]">
+        <section className="bg-[#FFFFF7] text-[#174727]">
             <div className="mx-auto w-full max-w-[1800px] px-4 py-16 md:py-24">
                 {/* Title */}
                 <motion.h1

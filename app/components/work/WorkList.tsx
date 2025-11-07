@@ -6,7 +6,7 @@ import WorkCard from "./WorkCard";
 export default function WorkList() {
     const works = getAllWorks();
     return (
-        <ul className="divide-y divide-black/10 rounded-sm bg-[#F8F8F8]">
+        <ul className="divide-y divide-black/10 rounded-sm bg-[#FFFFF7]">
             {works.map((w, i) => (
                 <WorkCard key={w.slug} work={w} />
             ))}
