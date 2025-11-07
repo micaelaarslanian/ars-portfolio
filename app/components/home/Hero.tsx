@@ -10,7 +10,7 @@ type HeroProps = {
 
 export default function Hero({ ctaLabel = "SEE MY WORK →" }: HeroProps) {
     return (
-        <section className="bg-[#FFFFF7] text-[#1f3a2d]">
+        <section className="bg-[#FFFCEA] text-[#1f3a2d]">
             <div className="mx-auto flex w-full max-w-[1600px] h-[800px] flex-col gap-10 px-4 pt-30 md:grid md:grid-cols-12 md:items-end md:gap-8 md:py-20 lg:py-24">
                 {/* Left: Title */}
                 <div className="md:col-span-7">
@@ -23,9 +23,7 @@ export default function Hero({ ctaLabel = "SEE MY WORK →" }: HeroProps) {
                 {/* Right: Copy + CTA */}
                 <div className="py-6 md:py-0 md:col-span-5 md:pb-3">
                     <p className="font-serif text-[25px]  md:text-[30px] text-[#174727]">
-                        A studio that builds thoughtful digital experiences at the
-                        intersection of design, story-telling and development. Led by a
-                        multidisciplinary designer.
+                        Transforming ideas into purposeful digital products through crafted design, engineering and storytelling.
                     </p>
 
                     <motion.div

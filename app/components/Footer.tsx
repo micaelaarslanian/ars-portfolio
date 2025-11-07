@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer
             id="contact"
-            className="bg-[#FFFFF7] text-[#2b3a2f] scroll-mt-24"
+            className="bg-[#FFFCEA] text-[#2b3a2f] scroll-mt-24"
         >
             <div className="mx-auto w-full  max-w-[1600px] px-4 pt-12 pb-10 md:pt-16 md:pb-14">
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-start">

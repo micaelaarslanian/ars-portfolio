@@ -72,7 +72,7 @@ export default function About() {
     );
 
     return (
-        <section className="bg-[#FFFFF7] text-[#174727]">
+        <section className="bg-[#FFFCEA] text-[#174727]">
             <div className="mx-auto w-full max-w-[1800px] px-4 py-16 md:py-24">
                 {/* Title */}
                 <motion.h1
@@ -172,7 +172,7 @@ export default function About() {
                             <MotionLink href="/work" className="hover:opacity-70 border-b">
                                 SEE MY WORK
                             </MotionLink>
-                            <MotionLink href="#footer" className="hover:opacity-70">
+                            <MotionLink href="#contact" className="hover:opacity-70">
                                 CONTACT ME
                             </MotionLink>
                         </div>

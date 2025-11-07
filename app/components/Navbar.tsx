@@ -85,7 +85,7 @@ export default function Navbar() {
     return (
         <>
             {/* ----- header  ----- */}
-            <header className="sticky top-0 z-30 flex h-16 w-full items-center px-4 bg-[#FFFFF7] backdrop-blur ">
+            <header className="sticky top-0 z-30 flex h-16 w-full items-center px-4 bg-[#FFFCEA] backdrop-blur ">
                 <Link href="/" aria-label="Go home" className="font-semibold text-[#2b3a2f]">
                     <img src="/logo_green.png" alt="ars" className="h-10" />
                 </Link>

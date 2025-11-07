@@ -102,7 +102,7 @@ export default function SelectedWork({ work }: { work: Work }) {
     const content = work.content ?? [];
 
     return (
-        <article className="mx-auto w-full max-w-[1200px] px-4 py-10 md:py-14">
+        <article className="mx-auto w-full max-w-[1800px]  px-4 py-10 md:py-14">
             {/* Header */}
             <header className="text-center">
                 <AnimatedPageTitle >{work.title}</AnimatedPageTitle>

@@ -66,12 +66,12 @@ export default function WorkCard({ work }: { work: Work }) {
         <motion.li layout initial={false} className="py-8 md:py-10">
             <Link href={`/work/${work.slug}`} className="group block focus:outline-none">
                 <motion.article
-                    initial={{ backgroundColor: "#FFFFF7", scale: 1 }}
+                    initial={{ backgroundColor: "#FFFCEA", scale: 1 }}
                     whileHover={{ backgroundColor: "#FFFFFF", scale: scaleHover }}
                     whileTap={{ scale: scaleTap }}
                     transition={{ type: "spring", stiffness: 260, damping: 22, mass: 0.6 }}
                     className="grid grid-cols-1 gap-4 rounded-sm md:grid-cols-12 md:items-center
-                     ring-0 focus-within:ring-2 focus-within:ring-[#174727] focus-within:ring-offset-2"
+                     "
                     style={{ transformOrigin: "center" }}
                 >
                     {/* Thumbnail container */}

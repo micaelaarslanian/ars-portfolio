@@ -37,7 +37,7 @@ export const WORKS: Work[] = [
             {
                 type: "text",
                 heading: "Overview",
-                body: "This is placeholder copy. Replace with a short overview of goals, constraints, and outcomes. Keep it ~3–5 sentences so it’s skimmable.",
+                body: "Content content",
             },
             spacer("sm"),
             {
@@ -53,15 +53,15 @@ export const WORKS: Work[] = [
             {
                 type: "text",
                 heading: "Process",
-                body: "Use this section for process notes: research insights, design iterations, and key decisions. Feel free to add more images in between text blocks.",
+                body: "Content content",
             },
             spacer("sm"),
             { type: "image", src: "/work_images/sparkclub/shot-4.jpg", alt: "Motion exploration", aspect: "4/3" },
             spacer("lg"),
             {
                 type: "quote",
-                text: "“Short impactful quote or result metric can go here.”",
-                author: "Stakeholder or you",
+                text: "Content content",
+                author: "Content content",
             },
             spacer("md"),
             { type: "image", src: "/work_images/sparkclub/shot-5.jpg", alt: "Final screen", aspect: "16/9" },
@@ -77,7 +77,7 @@ export const WORKS: Work[] = [
         content: [
             { type: "image", src: "/work_images/unihub/cover.jpg", alt: "Cover", aspect: "16/9" },
             spacer("md"),
-            { type: "text", heading: "Overview", body: "Replace with your content." },
+            { type: "text", heading: "Overview", body: "Content" },
             spacer("md"),
             {
                 type: "imageGrid",
@@ -99,7 +99,7 @@ export const WORKS: Work[] = [
         content: [
             { type: "image", src: "/work_images/citiciti/cover.jpg", alt: "Cover", aspect: "16/9" },
             spacer("md"),
-            { type: "text", body: "Add your story here." },
+            { type: "text", body: "Content content" },
         ],
     },
 ];

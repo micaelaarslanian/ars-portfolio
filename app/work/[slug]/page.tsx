@@ -26,7 +26,7 @@ export default async function WorkDetailPage({
 
     // return selected work component
     return (
-        <section className="bg-[#FEFEFE] text-[#174727]">
+        <section className="bg-[#FFFCEA] text-[#174727]">
             <div className="mx-auto w-full max-w-[1600px] px-4 py-8 md:py-12">
 
                 {/* Back button */}
@@ -34,12 +34,12 @@ export default async function WorkDetailPage({
                     href="/work"
                     className="
             inline-flex items-center gap-1
-            text-xs font-medium tracking-wide text-[#174727]
+            text-[14px] font-medium tracking-wide text-[#174727] 
+            border-b 
             hover:opacity-70 transition-opacity
-            focus:outline-none focus-visible:ring-2 focus-visible:ring-[#174727]
           "
                 >
-                    <span className="text-lg">←</span> BACK TO ALL WORK
+                    <span>←</span> BACK TO ALL WORK
                 </Link>
 
                 {/* Page content */}

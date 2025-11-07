@@ -64,7 +64,7 @@ export default function ContactForm() {
                         required
                         aria-label="Name"
                         placeholder="Name"
-                        className={`w-full  bg-[white] border-[0.5px] border-[#EEEEE9] px-4 py-3  ring-1 ring-transparent focus:ring-neutral-300 ${errors.name ? "ring-red-400" : ""}`}
+                        className={`w-full  bg-[white] px-4 py-3  ring-1 ring-transparent focus:ring-neutral-300 ${errors.name ? "ring-red-400" : ""}`}
                         {...register("name")}
                     />
                     {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
@@ -77,7 +77,7 @@ export default function ContactForm() {
                         required
                         aria-label="Email"
                         placeholder="Email"
-                        className={`w-full  bg-[white] border-[0.5px] border-[#EEEEE9] px-4 py-3 ring-1 ring-transparent focus:ring-neutral-300 ${errors.email ? "ring-red-400" : ""}`}
+                        className={`w-full  bg-[white]  px-4 py-3 ring-1 ring-transparent focus:ring-neutral-300 ${errors.email ? "ring-red-400" : ""}`}
                         {...register("email")}
                     />
                     {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 aria-label="Message"
                 placeholder="Message"
                 rows={6}
-                className={`w-full bg-[white] border-[0.5px] border-[#EEEEE9] px-4 py-4 mt-3 ring-1 ring-transparent focus:ring-neutral-300 ${errors.message ? "ring-red-400" : ""}`}
+                className={`w-full bg-[white] px-4 py-4 mt-3 ring-1 ring-transparent focus:ring-neutral-300 ${errors.message ? "ring-red-400" : ""}`}
                 {...register("message")}
             />
 
