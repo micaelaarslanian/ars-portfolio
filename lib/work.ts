@@ -6,7 +6,11 @@ export type Work = {
     description: string;
     fields?: string[];
     thumbUrl?: string;
+    firstParagraph?: string;
     content?: ContentBlock[];
+    href?: string;
+    github?: string;
+    coverUrl?: string;
 };
 
 
@@ -24,58 +28,56 @@ export const spacer = (size: "sm" | "md" | "lg" = "md"): ContentBlock => ({ type
 
 // data for works/projects
 export const WORKS: Work[] = [
+
+    // SPARKCLUB PROJECT
     {
         slug: "sparkclub",
-        title: "SparkClub",
-        description: "Brand + product UI concept exploring playful energy.",
-        fields: ["Branding", "UI"],
-        thumbUrl: "/work_images/sparkclub/thumbnail.png",
-        coverUrl: "/work_images/sparkclub/cover.jpg",
+        title: "Designing the full UI/UX and developing a custom website to launch and sell an AI product.",
+        description: "SPARKCLUB",
+        fields: ["UX & UI Design", "Frontend Development"],
+        thumbUrl: "/work_images/sparkclub/spark-portfolio-01.png",
+        coverUrl: "/work_images/sparkclub/portfolio-spark-01.png",
+        firstParagraph: "SparkClub strengthens workplace relationships through curated experiences planned in minutes. Powered by Nevenka, an AI teammate who understands your team and turns ideas into tailored event proposals in seconds, SparkClub removes the stress of organising meaningful moments.",
         content: [
-            { type: "image", src: "/work_images/sparkclub/cover.jpg", alt: "Hero mockup", caption: "Hero visual", aspect: "16/9" },
+            { type: "image", src: "/work_images/sparkclub/spark-portfolio-01.png", alt: "Hero mockup", caption: "Home page", aspect: "16/9" },
             spacer("md"),
             {
                 type: "text",
-                heading: "Overview",
-                body: "Content content",
+                body: "The website was designed and developed fully responsive across all devices, ensuring a seamless and consistent user experience. I led the UX and UI design in Figma, working closely with the existing brand identity to create clear flows, intuitive interfaces, and a refined visual system. On the development side, I built the site using React, Next.js, Tailwind, and Motion, crafting a performant, accessible, and dynamic front-end that mirrors the product’s energy and purpose.",
             },
             spacer("sm"),
             {
                 type: "imageGrid",
                 columns: 3,
                 items: [
-                    { src: "/work_images/sparkclub/shot-1.jpg", alt: "UI Screen 1" },
-                    { src: "/work_images/sparkclub/shot-2.jpg", alt: "UI Screen 2" },
-                    { src: "/work_images/sparkclub/shot-3.jpg", alt: "UI Screen 3" },
+                    { src: "/work_images/sparkclub/spark-portfolio-04.png", alt: "UI Screen 1" },
+                    { src: "/work_images/sparkclub/spark-portfolio-03.png", alt: "UI Screen 2" },
+                    { src: "/work_images/sparkclub/spark-portfolio-07.png", alt: "UI Screen 3" },
                 ],
             },
             spacer("md"),
-            {
-                type: "text",
-                heading: "Process",
-                body: "Content content",
-            },
-            spacer("sm"),
-            { type: "image", src: "/work_images/sparkclub/shot-4.jpg", alt: "Motion exploration", aspect: "4/3" },
+
+            { type: "image", src: "/work_images/sparkclub/spark-portfolio-05.png", alt: "Motion exploration", aspect: "4/3" },
             spacer("lg"),
-            {
-                type: "quote",
-                text: "Content content",
-                author: "Content content",
-            },
-            spacer("md"),
-            { type: "image", src: "/work_images/sparkclub/shot-5.jpg", alt: "Final screen", aspect: "16/9" },
+
+            { type: "image", src: "/work_images/sparkclub/spark-portfolio-06.png", alt: "Final screen", aspect: "16/9" },
         ],
+        href: "https://www.sparkclub.xyz/",
+        github: "https://github.com/DelfinBlaksleyMujica/Spark-Web/tree/miki-dev",
     },
+
+
+    // UNIHUB PROJECT
     {
         slug: "unihub",
-        title: "UniHub",
-        description: "Student platform concept.",
-        fields: ["UX", "Web App"],
-        thumbUrl: "/work_images/unihub/thumbnail.png",
-        coverUrl: "/work_images/unihub/cover.jpg",
+        title: "Building a platform to connect university students with resources and opportunities.",
+        description: "UNIHUB",
+        fields: ["UX & UI Design", "Frontend Development"],
+        thumbUrl: "/work_images/unihub/unihub-portfolio.png",
+        coverUrl: "/work_images/unihub/unihub-cover.png",
+        firstParagraph: "UNIHUB strengthens university communities by connecting students with resources, events, and opportunities tailored to their needs. The platform fosters engagement and collaboration, making campus life more accessible and enriching.",
         content: [
-            { type: "image", src: "/work_images/unihub/cover.jpg", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/unihub/unihub-cover.png", alt: "Cover", aspect: "16/9" },
             spacer("md"),
             { type: "text", heading: "Overview", body: "Content" },
             spacer("md"),
@@ -83,12 +85,16 @@ export const WORKS: Work[] = [
                 type: "imageGrid",
                 columns: 2,
                 items: [
-                    { src: "/work_images/unihub/shot-1.jpg" },
-                    { src: "/work_images/unihub/shot-2.jpg" },
+                    { src: "/work_images/unihub/unihub-portfolio-02.png" },
+                    { src: "/work_images/unihub/unihub-portfolio-03.png" },
                 ],
             },
         ],
+        href: "https://unihub-site.vercel.app/",
+        github: "https://github.com/micaelaarslanian/unihub-site"
     },
+
+    // CITIFLOW PROJECT
     {
         slug: "citiciti",
         title: "CitiCiti",

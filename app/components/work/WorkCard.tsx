@@ -11,7 +11,7 @@ import { useMemo } from "react";
 function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
     const prefersReduced = useReducedMotion();
     const words = useMemo(
-        () => text.split(" ").map((w, i) => ({ id: `${w}-${i}`, w })),
+        () => text.split(" ").map((w, i) => ({ id: `${w}-${i}-${Math.random()}`, w })),
         [text]
     );
 
@@ -19,7 +19,7 @@ function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
 
     return (
         <motion.span
-            className="inline-block"
+            className="inline-flex flex-wrap gap-x-[0.3ch] overflow-hidden gap-y-0.1"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
@@ -60,7 +60,7 @@ export default function WorkCard({ work }: { work: Work }) {
     const scaleTap = prefersReduced ? 1 : 0.995;
 
     // Slight stagger per card:
-    const baseDelay = 0.12; // image & text start slightly after page title has appeared
+    const baseDelay = 0.12;
 
     return (
         <motion.li layout initial={false} className="py-8 md:py-10">
@@ -128,10 +128,10 @@ export default function WorkCard({ work }: { work: Work }) {
 
                     {/* Text block (title + description) */}
                     <div className="md:col-span-6">
-                        <h3 className="text-[36px]  tracking-wide text-[#174727]">
+                        <h3 className="text-[30px]  tracking-wide text-[#174727]">
                             <WordReveal text={work.title} delay={baseDelay + 0.02} />
                         </h3>
-                        <p className="mt-1 text-[18px] tracking-wide text-[#174727]">
+                        <p className="mt-4 text-[18px] tracking-wide text-[#174727]">
                             <WordReveal text={work.description ?? ""} delay={baseDelay + 0.08} />
                         </p>
                     </div>

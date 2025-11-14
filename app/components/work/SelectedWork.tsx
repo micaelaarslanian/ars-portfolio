@@ -1,6 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import type { Work, ContentBlock } from "@/lib/work";
-import AnimatedPageTitle from "./AnimatedPageTitle";
 
 
 // function to wrap content in aspect ratio container
@@ -67,9 +69,9 @@ function BlockRenderer({ block }: { block: ContentBlock }) {
         case "text": {
             const { heading, body } = block;
             return (
-                <div className="mx-auto max-w-[70ch]">
-                    {heading ? <h2 className="text-xl font-semibold text-[#174727]">{heading}</h2> : null}
-                    <p className={`mt-${heading ? "2" : "0"} text-sm leading-6 text-[#174727]/80`}>{body}</p>
+                <div className="mx-0 max-w-[100ch]">
+                    {heading ? <h2 className="text-[20px] font-semibold text-[#174727]">{heading}</h2> : null}
+                    <p className={`mt-${heading ? "2" : "0"} text-[20px]  text-[#174727]/80`}>{body}</p>
                 </div>
             );
         }
@@ -78,7 +80,7 @@ function BlockRenderer({ block }: { block: ContentBlock }) {
         case "quote": {
             const { text, author } = block;
             return (
-                <blockquote className="mx-auto max-w-[70ch] border-l-2 border-[#174727]/30 pl-4 text-base italic text-[#174727]">
+                <blockquote className="mx-auto max-w-[100ch] border-l-2 border-[#174727]/30 pl-4 text-base italic text-[#174727]">
                     “{text}”
                     {author ? <footer className="mt-2 text-xs not-italic text-[#174727]/70">— {author}</footer> : null}
                 </blockquote>
@@ -104,13 +106,23 @@ export default function SelectedWork({ work }: { work: Work }) {
     return (
         <article className="mx-auto w-full max-w-[1800px]  px-4 py-10 md:py-14">
             {/* Header */}
-            <header className="text-center">
-                <AnimatedPageTitle >{work.title}</AnimatedPageTitle>
-                <p className="mt-2 text-sm text-[#174727]/80">{work.description}</p>
-                {work.fields?.length ? (
-                    <p className="mt-1 text-xs text-[#174727]/70">{work.fields.join(", ")}</p>
-                ) : null}
+            <header className="text-left">
+                <motion.h1 className="text-[30px] md:text-[55px] font-medium text-[#174727] leading-[1.4] pb-6 mb-2">{work.title}</motion.h1>
+
+
+                <p className="mt-1 text-[35px] text-[#174727]/70 ">{work.description}</p>
+
+                <p className="my-4 py-6 text-[20px] text-[#174727]/80 lg:w-[80ch]"> {work.firstParagraph}</p>
+
+                <div className="flex flex-row gap-10">
+                    <motion.a className=" text-[18px] text-[#174727]/80 border-b border-[#174727]/80" href={work.href} target="_blank" rel="noopener noreferrer">   Website →
+                    </motion.a>
+
+                    <motion.a className=" text-[18px] text-[#174727]/80 border-b  border-[#174727]/80" href={work.github} target="_blank" rel="noopener noreferrer">   Github →
+                    </motion.a>
+                </div>
             </header>
+
 
             {/* Body */}
             <div className="mt-8 md:mt-12 space-y-6 md:space-y-8">

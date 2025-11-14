@@ -47,7 +47,7 @@ export default function About() {
             },
         };
 
-    const vp = { once: true, amount: 0.2 } as const;
+    const vp = { once: true, amount: 0 } as const;
 
     // Animated link wrapper
     const MotionLink = ({
@@ -79,8 +79,7 @@ export default function About() {
                     className="text-left text-[44px] leading-none tracking-wide md:text-[64px]"
                     variants={fadeUp}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={vp}
+                    animate="show"
                 >
                     ABOUT
                 </motion.h1>
@@ -90,8 +89,7 @@ export default function About() {
                     className="mt-16 md:mt-24"
                     variants={container}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={vp}
+                    animate="show"
                 >
                     {/* Kicker */}
                     <motion.p
