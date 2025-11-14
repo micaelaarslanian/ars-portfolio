@@ -127,8 +127,8 @@ export default function WorkCard({ work }: { work: Work }) {
                     </div>
 
                     {/* Text block (title + description) */}
-                    <div className="md:col-span-6">
-                        <h3 className="text-[30px]  tracking-wide text-[#174727]">
+                    <div className="md:col-span-6 md:pr-6 md:mr-4">
+                        <h3 className="text-[30px] md:text-[20px] lg:text-[30px]  tracking-wide text-[#174727]">
                             <WordReveal text={work.title} delay={baseDelay + 0.02} />
                         </h3>
                         <p className="mt-4 text-[18px] tracking-wide text-[#174727]">
@@ -137,10 +137,10 @@ export default function WorkCard({ work }: { work: Work }) {
                     </div>
 
                     {/* Fields */}
-                    <div className="md:col-span-3 md:text-right ">
+                    <div className="md:col-span-3 md:text-right">
                         {work.fields?.length ? (
-                            <p className="font-serif mt-1 text-[16px] tracking-wide text-[#174727]">
-                                ✺  <WordReveal text={work.fields.join(", ")} delay={baseDelay + 0.1} />
+                            <p className="font-serif mt-1 text-[16px] text-[#174727]">
+                                <WordReveal text={work.fields.join(", ")} delay={baseDelay + 0.1} />
                             </p>
                         ) : null}
                     </div>
