@@ -41,8 +41,7 @@ Email: ${email}
 
 ${message}
 `,
-            // You can send HTML instead if you prefer
-            // html: `<p><strong>Name:</strong> ${name}</p>...`
+
         });
 
         return NextResponse.json({ ok: true });

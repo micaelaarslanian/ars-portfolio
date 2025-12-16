@@ -10,13 +10,14 @@ export type Work = {
     content?: ContentBlock[];
     href?: string;
     github?: string;
+    featured?: string;
     coverUrl?: string;
 };
 
 
-// Defines the different types of content blocks that can be used in a work's content array
+// Defines the different types of content blocks that can be used in a work's content array.
 export type ContentBlock =
-    | { type: "image"; src: string; alt?: string; caption?: string; aspect?: "16/9" | "4/3" | "1/1" | "auto" }
+    | { type: "image"; src: string; alt?: string; caption?: string; aspect?: "16/9" | "4/3" | "1/1" | "fit" }
     | { type: "imageGrid"; items: { src: string; alt?: string }[]; columns?: 2 | 3 | 4, caption?: string }
     | { type: "text"; heading?: string; body: string }
     | { type: "quote"; text: string; author?: string }
@@ -144,13 +145,134 @@ export const WORKS: Work[] = [
                 ],
             },
         ],
-
-
-
-
         href: "https://sevan-booking-app.vercel.app/",
         github: "https://github.com/micaelaarslanian/sevan-booking-app"
     },
+
+    // CITY FLOW PROJECT
+    {
+        slug: "city-flow",
+        title: "Driving UX Research and Service Design to make spontaneous dining choices easier.",
+        description: "CITY FLOW",
+        fields: ["✺ User Research", "UX Design", "Service Design"],
+        thumbUrl: "/work_images/cityflow/cover.svg",
+        coverUrl: "/work_images/sevan/cover-01.png",
+        firstParagraph: "CityFlow is a UX and service design project created to support “smart spontaneity” in fast-paced urban environments. In cities like London, choosing a café or restaurant often comes with uncertainty: long queues, crowded spaces, and unpredictable wait times. CityFlow explores how design can empower users to make confident, on-the-go dining decisions by providing clearer expectations, reducing stress, and maintaining the flow of their day.",
+        content: [
+            { type: "image", src: "/work_images/cityflow/cover-01.png", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+            { type: "image", src: "/work_images/cityflow/taskanalysis.svg", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", heading: "User Interviews", body: "To ground the project in real behaviour, I conducted in-person user interviews with busy Londoners to understand how they choose cafés and restaurants on the go. These conversations revealed common frustrations around long queues, unpredictability, and the pressure to plan ahead, helping shape the core insights and design direction of CityFlow." },
+            { type: "image", src: "/work_images/cityflow/userinterview.svg", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", heading: "Persona", body: "The persona was created to represent busy Londoners who rely on spontaneity but are often disrupted by overcrowded cafés and long queues. Built from research insights, it captures key behaviours, motivations, and pain points, helping anchor design decisions in real user needs and ensuring the experience supports confident, on-the-go choices." },
+            { type: "image", src: "/work_images/cityflow/persona.svg", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", heading: "Sketching & Ideation", body: "Hand-drawn sketches were used to explore ideas quickly, test different flows, and experiment with possible solutions. This phase encouraged rapid iteration and creative thinking before committing to refined designs." },
+            { type: "image", src: "/work_images/cityflow/sketching.svg", alt: "Cover", aspect: "16/9" },
+
+            spacer("md"),
+            { type: "text", heading: "Customer Journey", body: "The customer journey map outlines the end-to-end experience of a Londoner looking to dine out without a prior booking. It traces the user’s path from initial intent and discovery through exploration, virtual queueing, arrival, and post-meal engagement, highlighting key actions, touchpoints, and pain points at each stage. Mapping this journey helped identify moments of uncertainty and frustration, guiding design decisions towards a smoother, more confident, and spontaneous dining experience." },
+            { type: "image", src: "/work_images/cityflow/customerjourney.svg", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+
+            { type: "text", heading: "User Flow", body: "The user flow visualises the core path from initial intent to successfully securing a place to eat. It maps the essential steps a user takes to explore options, join a virtual queue, receive a notification when it’s their turn, and, if needed, cancel or switch plans without friction." },
+            { type: "image", src: "/work_images/cityflow/userflow.svg", alt: "Cover", aspect: "1/1" },
+
+            spacer("md"),
+            { type: "text", heading: "Lo-fi Wireframes", body: "The low-fidelity wireframes explore the core experience for both new and returning users. They focus on early filtering steps that help tailor recommendations, followed by map and list views for browsing nearby options, selecting a venue, and joining the virtual queue. This stage prioritised structure, clarity, and flow before visual refinement." },
+            {
+                type: "imageGrid",
+                columns: 2,
+                items: [
+                    { src: "/work_images/cityflow/Frame1.svg", alt: "Screen" },
+                    { src: "/work_images/cityflow/Frame2.svg", alt: "Screen" },
+                ],
+            },
+            { type: "image", src: "/work_images/cityflow/Frame3.svg", alt: "Cover", aspect: "16/9" },
+        ],
+    },
+
+    // SPICY LILO PROJECT
+    {
+        slug: "spicy-lilo-project",
+        title: "Chef website.",
+        description: "SPICY LILO",
+        fields: ["✺ Visual Identity", "UX & UI Design", "Frontend Development"],
+        thumbUrl: "/work_images/spicylilo/cover.png",
+        coverUrl: "/work_images/spicylilo/spicy-01.png",
+        firstParagraph: "bla bla",
+        content: [
+            { type: "image", src: "/work_images/spicylilo/spicy-01.png", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", body: "bla bla" },
+            spacer("md"),
+
+            {
+                type: "imageGrid",
+                columns: 2,
+                items: [
+                    { src: "/work_images/spicylilo/spicy-02.png", alt: "Screen" },
+                    { src: "/work_images/spicylilo/spicy-03.png", alt: "Screen" },
+                ],
+            },
+            spacer("md"),
+
+            { type: "image", src: "/work_images/spicylilo/spicy-04.png", alt: "Cover", aspect: "16/9" },
+            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+
+
+            spacer("md"),
+            { type: "image", src: "/work_images/spicylilo/presentation.gif", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/spicylilo/gif_flyeres.gif", alt: "Cover", aspect: "16/9" },
+
+
+
+        ],
+        href: "https://spicy-lilo.vercel.app/",
+        github: "https://github.com/micaelaarslanian/Chefs-Website"
+    },
+
+    // FESTIVAL PROJECT
+    {
+        slug: "festival-project",
+        title: "Disegning the visual identity and digital presence for a vibrant festival.",
+        description: "SINCRO",
+        fields: ["✺ Visual Identity, Art Direction"],
+        thumbUrl: "/work_images/festival/festival-04.png",
+        coverUrl: "/work_images/festival/festival-04.png",
+        firstParagraph: "bla bla",
+        content: [
+            { type: "image", src: "/work_images/festival/festival-04.png", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+            { type: "text", body: "LOGO LOGO" },
+            spacer("md"),
+
+            { type: "image", src: "/work_images/festival/festival-09.png", alt: "Cover", aspect: "16/9" },
+
+            spacer("md"),
+
+            { type: "image", src: "/work_images/festival/festival-05.png", alt: "Cover", aspect: "16/9" },
+            spacer("md"),
+
+            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+            { type: "image", src: "/work_images/festival/festival-02.png", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/festival/festival-03.png", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/festival/festival-01.png", alt: "Cover", aspect: "16/9" },
+
+            spacer("md"),
+
+            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+            { type: "image", src: "/work_images/festival/festival-06.png", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/festival/festival-07.png", alt: "Cover", aspect: "16/9" },
+            { type: "image", src: "/work_images/festival/festival-08.png", alt: "Cover", aspect: "16/9" },
+
+        ],
+        featured: "https://catedragabriele.com.ar/portfolio/nivel3/sincro/"
+    },
+
 ];
 
 

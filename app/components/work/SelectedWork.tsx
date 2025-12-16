@@ -114,13 +114,25 @@ export default function SelectedWork({ work }: { work: Work }) {
 
                 <p className="my-4 py-6 text-[20px] text-[#174727]/80 lg:w-[80ch]"> {work.firstParagraph}</p>
 
-                <div className="flex flex-row gap-10">
-                    <motion.a className=" text-[18px] text-[#174727]/80 border-b border-[#174727]/80" href={work.href} target="_blank" rel="noopener noreferrer">   Website →
-                    </motion.a>
+                {/* if it has a href or github, render this, otherwise, do not render anything */}
+                {(work.href || work.github || work.featured) && (
+                    <div className="flex flex-row gap-10">
+                        {work.href && (
+                            <motion.a className=" text-[18px] text-[#174727]/80 border-b border-[#174727]/80" href={work.href} target="_blank" rel="noopener noreferrer">   Website →
+                            </motion.a>
+                        )}
 
-                    <motion.a className=" text-[18px] text-[#174727]/80 border-b  border-[#174727]/80" href={work.github} target="_blank" rel="noopener noreferrer">   Github →
-                    </motion.a>
-                </div>
+                        {work.github && (
+                            <motion.a className=" text-[18px] text-[#174727]/80 border-b  border-[#174727]/80" href={work.github} target="_blank" rel="noopener noreferrer">   Github →
+                            </motion.a>
+                        )}
+
+                        {work.featured && (
+                            <motion.a className=" text-[18px] text-[#174727]/80 border-b  border-[#174727]/80" href={work.featured} target="_blank" rel="noopener noreferrer">   Featured →
+                            </motion.a>
+                        )}
+                    </div>
+                )}
             </header>
 
 
