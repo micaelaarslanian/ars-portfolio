@@ -198,16 +198,17 @@ export const WORKS: Work[] = [
     // SPICY LILO PROJECT
     {
         slug: "spicy-lilo-project",
-        title: "Chef website.",
+        title: "Shaping a creative chef-led brand from concept to visual identity and web experience.",
         description: "SPICY LILO",
         fields: ["✺ Visual Identity", "UX & UI Design", "Frontend Development"],
         thumbUrl: "/work_images/spicylilo/cover.png",
         coverUrl: "/work_images/spicylilo/spicy-01.png",
-        firstParagraph: "bla bla",
+        firstParagraph: "This project involved shaping a complete visual and digital identity for Spicy Lilo, a chef-led small business centred on connection, creativity, and shared experiences through food. I designed the logo, brand concept, and social media assets, translating Spicy Lilo’s philosophy into a warm, expressive visual language. I then designed and built the website using JavaScript, React, and Tailwind CSS, creating an inviting digital presence that communicates her workshops, personalised offerings, and belief in cooking as a way to connect people.",
         content: [
             { type: "image", src: "/work_images/spicylilo/spicy-01.png", alt: "Cover", aspect: "16/9" },
             spacer("md"),
-            { type: "text", body: "bla bla" },
+
+            { type: "text", heading: "Visual Identity", body: "The logo was designed to be simple, clear, and elegant, reflecting Spicy Lilo’s warm yet refined approach to cooking. Social media assets and flyers were created to communicate her workshops and collaborations with clarity and personality, using a consistent visual language that feels inviting, expressive, and easy to recognise across platforms." },
             spacer("md"),
 
             {
@@ -221,8 +222,6 @@ export const WORKS: Work[] = [
             spacer("md"),
 
             { type: "image", src: "/work_images/spicylilo/spicy-04.png", alt: "Cover", aspect: "16/9" },
-            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
-
 
             spacer("md"),
             { type: "image", src: "/work_images/spicylilo/presentation.gif", alt: "Cover", aspect: "16/9" },
@@ -238,16 +237,16 @@ export const WORKS: Work[] = [
     // FESTIVAL PROJECT
     {
         slug: "festival-project",
-        title: "Disegning the visual identity and digital presence for a vibrant festival.",
+        title: "Directing a concept-led visual system for an analogue film festival.",
         description: "SINCRO",
         fields: ["✺ Visual Identity, Art Direction"],
         thumbUrl: "/work_images/festival/festival-04.png",
         coverUrl: "/work_images/festival/festival-04.png",
-        firstParagraph: "bla bla",
+        firstParagraph: "SINCRO is an analogue film festival designed entirely from scratch, spanning concept development, line-up curation, and a comprehensive visual identity system. The project involved the creation of a high-complex graphic language applied across multiple formats, including the logo, billboards, flyers, and editorial pieces. Named after the synchronisation required in frame-by-frame analogue cinema, the visual system draws from in-depth research into camera mechanics and archival manuals, translating technical processes into a structured, expressive graphic language. Developed as my bachelor’s thesis in Graphic Design, the project was featured on the Design III course website.",
         content: [
             { type: "image", src: "/work_images/festival/festival-04.png", alt: "Cover", aspect: "16/9" },
             spacer("md"),
-            { type: "text", body: "LOGO LOGO" },
+            { type: "text", heading: "LOGO", body: "" },
             spacer("md"),
 
             { type: "image", src: "/work_images/festival/festival-09.png", alt: "Cover", aspect: "16/9" },
@@ -257,14 +256,18 @@ export const WORKS: Work[] = [
             { type: "image", src: "/work_images/festival/festival-05.png", alt: "Cover", aspect: "16/9" },
             spacer("md"),
 
-            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+            { type: "text", heading: "BILLBOARD & POSTER DESIGN", body: "The billboard was designed for the urban landscape, prioritising clarity and impact when viewed from a distance. In contrast, the street posters were conceived as a modular system, allowing multiple pieces to be combined in different configurations. Together, they extend the festival’s visual language into public space, balancing legibility, repetition, and variation to create a strong and recognisable presence across the city." },
             { type: "image", src: "/work_images/festival/festival-02.png", alt: "Cover", aspect: "16/9" },
             { type: "image", src: "/work_images/festival/festival-03.png", alt: "Cover", aspect: "16/9" },
+
+            spacer("md"),
+
+            { type: "text", heading: "INFOGRAPHY", body: "The infographic was designed as a large-scale piece measuring 1.2 metres in height, conceived to operate simultaneously at macro and micro levels. From a distance, its structure communicates a clear, overarching logic, while closer inspection reveals detailed information about seminars, courses, and participating artists. Every element was carefully considered, resulting in a highly precise, information-dense artefact that balances readability, hierarchy, and conceptual coherence." },
             { type: "image", src: "/work_images/festival/festival-01.png", alt: "Cover", aspect: "16/9" },
 
             spacer("md"),
 
-            { type: "text", heading: "Task Analysis", body: "This task analysis marked the first exploratory phase of the project, where I defined the core user goals: understanding user needs, suggesting venues based on their preferences, and enabling virtual queueing. Alongside this, I conducted a competitive analysis of existing queueing and booking apps to identify gaps in the market. The key insight emerged around a common limitation: while many solutions optimise efficiency, they often remove spontaneity." },
+            { type: "text", heading: "FOLDABLE BROCHURE", body: "A key piece of the festival’s communication was a foldable brochure designed as both an informational guide and a central expression of the visual system. Printed double-sided and structured across six faces, it brings together the full three-day line-up, activities, exhibitions, seminars, and talks, while also explaining the festival’s concept in depth. The brochure was designed with a high level of graphic precision, using structure, hierarchy, and rhythm inspired by analogue film mechanics to organise a dense amount of content into a coherent, readable, and visually striking artefact." },
             { type: "image", src: "/work_images/festival/festival-06.png", alt: "Cover", aspect: "16/9" },
             { type: "image", src: "/work_images/festival/festival-07.png", alt: "Cover", aspect: "16/9" },
             { type: "image", src: "/work_images/festival/festival-08.png", alt: "Cover", aspect: "16/9" },
