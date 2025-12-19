@@ -55,6 +55,9 @@ function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
 
 export default function WorkCard({ work }: { work: Work }) {
 
+    const thumbSrc = work.thumbUrl; // string | undefined
+
+
     const prefersReduced = useReducedMotion();
     const scaleHover = prefersReduced ? 1 : 1.01;
     const scaleTap = prefersReduced ? 1 : 0.995;
@@ -93,7 +96,12 @@ export default function WorkCard({ work }: { work: Work }) {
                                             : { opacity: { duration: 0.35 }, scale: { type: "spring", stiffness: 180, damping: 20 } }
                                     }
                                 >
-                                    <img src={work.thumbUrl} className="h-full w-full" />
+                                    {thumbSrc ? (
+                                        <img src={thumbSrc} alt={`${work.title} thumbnail`} className="h-full w-full object-cover" />
+                                    ) : (
+                                        <div className="h-full w-full bg-gradient-to-br from-gray-200 to-gray-300" />
+                                    )}
+
                                 </motion.div>
                             </div>
 
@@ -113,14 +121,18 @@ export default function WorkCard({ work }: { work: Work }) {
                                             : { delay: baseDelay, opacity: { duration: 0.35 }, scale: { type: "spring", stiffness: 180, damping: 20 } }
                                     }
                                 >
-                                    <Image
-                                        src={work.thumbUrl}
-                                        alt={`${work.title} thumbnail`}
-                                        fill
-                                        sizes="(max-width: 767px) 100vw, 0"
-                                        className="object-cover"
-                                        priority={false}
-                                    />
+                                    {thumbSrc ? (
+                                        <Image
+                                            src={thumbSrc}
+                                            alt={`${work.title} thumbnail`}
+                                            fill
+                                            sizes="(max-width: 767px) 100vw, 0"
+                                            className="object-cover"
+                                            priority={false}
+                                        />
+                                    ) : (
+                                        <div className="h-full w-full bg-gradient-to-br from-gray-200 to-gray-300" />
+                                    )}
                                 </motion.div>
                             </div>
                         </div>
