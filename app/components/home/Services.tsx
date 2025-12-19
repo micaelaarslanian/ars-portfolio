@@ -1,6 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import type { Transition } from "framer-motion";
+
 import { useMemo } from "react";
 
 const DEV_SERVICES = [
@@ -23,19 +25,16 @@ type AnimatedTitleProps = {
 function AnimatedTitle({ text, listDelayRef }: AnimatedTitleProps) {
     const prefersReduced = useReducedMotion();
 
-    // Feel controls
-    const baseSpring = prefersReduced
+    const baseSpring: Transition = prefersReduced
         ? { duration: 0 }
         : { type: "spring", stiffness: 420, damping: 18, mass: 0.7 };
 
-    // Per-letter timing
-    const letterStagger = prefersReduced ? 0 : 0.025;      // how quickly letters chain
-    const parentDelay = prefersReduced ? 0 : 0.05;         // initial delay before letters start
+    const letterStagger = prefersReduced ? 0 : 0.025;
+    const parentDelay = prefersReduced ? 0 : 0.05;
 
-    // delay for the list so it begins after most letters appear
     const computedListDelay = prefersReduced
         ? 0
-        : parentDelay + Math.min(text.length * letterStagger, 0.45) + 0.08 + 1;
+        : parentDelay + Math.min(text.length * letterStagger, 0.45) + 0.08;
 
     if (listDelayRef) listDelayRef.current = computedListDelay;
 
@@ -45,7 +44,6 @@ function AnimatedTitle({ text, listDelayRef }: AnimatedTitleProps) {
     );
 
     return (
-        // Clip the vertical slide
         <span className="block overflow-hidden">
             <motion.span
                 aria-label={text}
@@ -87,7 +85,7 @@ function AnimatedList({
     delay?: number;
 }) {
     const prefersReduced = useReducedMotion();
-    const springy = prefersReduced
+    const springy: Transition = prefersReduced
         ? { duration: 0 }
         : { type: "spring", stiffness: 160, damping: 20, mass: 0.6 };
 
