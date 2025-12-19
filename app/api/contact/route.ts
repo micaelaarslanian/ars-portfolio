@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         // 1) Validate env at runtime (don’t crash builds)
         const RESEND_API_KEY = process.env.RESEND_API_KEY;
         const MAIL_FROM = process.env.MAIL_FROM;
-        const MAIL_TO = process.env.MAIL_TO || "micaelarslanian@gmail.com";
+        const MAIL_TO = process.env.MAIL_TO || "micaela.arslanian@gmail.com";
 
         if (!RESEND_API_KEY || !MAIL_FROM) {
             return NextResponse.json(
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
             from: MAIL_FROM,
             to: MAIL_TO,
             subject: `New inquiry from ${name}`,
-            replyTo: email, 
+            replyTo: email,
             text: `Name: ${name}\nEmail: ${email}\n\n${message}\n`,
         });
 

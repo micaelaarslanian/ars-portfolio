@@ -5,7 +5,7 @@ export type Work = {
     title: string;
     description: string;
     fields?: string[];
-    thumbUrl?: string;
+    thumbUrl: string;
     firstParagraph?: string;
     content?: ContentBlock[];
     href?: string;
