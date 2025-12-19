@@ -75,11 +75,14 @@ export default function Navbar() {
     // close menu on route change
     useEffect(() => setOpen(false), [pathname]);
 
-    // lock scroll when open
     useEffect(() => {
-        if (open) document.body.style.overflow = "hidden";
-        else document.body.style.overflow = "";
-        return () => (document.body.style.overflow = "");
+        const prev = document.body.style.overflow;
+
+        document.body.style.overflow = open ? "hidden" : prev;
+
+        return () => {
+            document.body.style.overflow = prev;
+        };
     }, [open]);
 
     return (
