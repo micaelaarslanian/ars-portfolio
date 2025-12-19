@@ -1,7 +1,11 @@
 import WorkList from "../components/work/WorkList";
 import AnimatedPageTitle from "../components/work/AnimatedPageTitle";
+import type { Metadata } from "next";
 
-// main work page component. WORK title, worklist 
+export const metadata: Metadata = {
+    title: "Work | STUDIO ARS",
+};
+
 export default function WorkPage() {
     return (
         <section className="bg-[#FFFCEA] text-[#174727]">
